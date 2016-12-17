@@ -24,10 +24,10 @@ switch ($servers) {
     case 1:
         switch ($online) {
             case 1:
-                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 of 1 servers are online.';
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title"> Server is online.';
                 break;
             default:
-                echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
+                echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">Server is down, contact an administrator.';
                 break;
         }
         break;
@@ -37,7 +37,7 @@ switch ($servers) {
                 echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 of 2 servers are online.';
                 break;
             case 2:
-                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 2 of 2 servers are online.';
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">All servers are online.';
                 break;
             default:
                 echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
@@ -53,7 +53,7 @@ switch ($servers) {
                 echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 2 of 3 servers are online.';
                 break;
             case 3:
-                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 3 servers are online.';
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">All servers are online.';
                 break;
             default:
                 echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
@@ -69,10 +69,10 @@ switch ($servers) {
                 echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 2 of 4 servers are online.';
                 break;
             case 3:
-                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 4 servers are online.';
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 3 of 4 servers are online.';
                 break;
             case 4:
-                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 4 of 4 servers are online.';
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Alll servers are online.';
                 break;
             default:
                 echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
@@ -88,13 +88,13 @@ switch ($servers) {
                 echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 2 of 5 servers are online.';
                 break;
             case 3:
-                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 5 servers are online.';
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 3 of 5 servers are online.';
                 break;
             case 4:
-                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 4 of 5 servers are online.';
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 4 of 5 servers are online.';
                 break;
             case 5:
-                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 5 of 5 servers are online.';
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">All servers are online.';
                 break;
             default:
                 echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
@@ -302,3 +302,8 @@ switch ($servers) {
 } else { 
  // display nothing server not in use
 } ?>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Made by Yetteh</span>
+      </div>
+    </footer>

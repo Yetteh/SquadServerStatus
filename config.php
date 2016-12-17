@@ -1,9 +1,7 @@
 <?php
-$communityname = 'Zulu X-Ray Delta';
-
-$server1 = 'https://squad-servers.com/api/?object=servers&element=detail&key=kyuv08nromzc0595igdi9oltcohuztvmky';
-$server2 = 'https://squad-servers.com/api/?object=servers&element=detail&key=v0zh48oqu8snla9l4vbk2wxs3u82i58h9h';
-$server3 = 'https://squad-servers.com/api/?object=servers&element=detail&key=v0zh48oqu8snla9l4vbk2wxs3u82i58h9h';
-$server4 = 'https://squad-servers.com/api/?object=servers&element=detail&key=kyuv08nromzc0595igdi9oltcohuztvmky';
-$server5 = 'https://squad-servers.com/api/?object=servers&element=detail&key=kyuv08nromzc0595igdi9oltcohuztvmky';
-
+$communityname = 'Enter Community Name Here';
+$server1 = 'https://squad-servers.com/api/?object=servers&element=detail&key=x'; // Always make sure this one is populated. Get the server API url from squad-servers.com
+$server2 = '';
+$server3 = '';
+$server4 = '';
+$server5 = '';
