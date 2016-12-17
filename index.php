@@ -143,6 +143,84 @@ require 'config.php' // Grabbing this for the luls
 } else { 
  // display nothing server not in use
 } ?>
+<?php if (!empty($server4)) {
+?>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <?php echo "$data4[hostname]";?>
+            <div id="address">IP:
+                <?php echo "$data4[address]";?>:
+                <?php echo "$data4[query_port]";?>
+            </div>
+            <div id="onlinestatus">
+                <?php if ($data4[ 'is_online']>='1') {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3"><strong>Current Map:</strong>
+                    <?php echo "$data4[map]";?>
+                </div>
+                <div class="col-md-3"><strong>Version: </strong>
+                    <?php echo "$data4[version]";?>
+                </div>
+                <div class="col-md-3"><strong>Online Players: </strong>
+                    <?php echo "$data4[players]";?> /
+                    <?php echo "$data4[maxplayers]";?>
+                </div>
+                <div class="col-md-2"><strong>Uptime: </strong>
+                    <?php echo "$data4[uptime]";?>%</button>
+                </div>
+                <div class="col-md-1">
+                    <a href='steam://connect/164.132.202.16:27185'>
+                        <button type="button" class="btn btn-default btn-xs">Join Server</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+} else { 
+ // display nothing server not in use
+} ?>
+<?php if (!empty($server5)) {
+?>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <?php echo "$data5[hostname]";?>
+            <div id="address">IP:
+                <?php echo "$data5[address]";?>:
+                <?php echo "$data5[query_port]";?>
+            </div>
+            <div id="onlinestatus">
+                <?php if ($data5[ 'is_online']>='1') {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3"><strong>Current Map:</strong>
+                    <?php echo "$data5[map]";?>
+                </div>
+                <div class="col-md-3"><strong>Version: </strong>
+                    <?php echo "$data5[version]";?>
+                </div>
+                <div class="col-md-3"><strong>Online Players: </strong>
+                    <?php echo "$data5[players]";?> /
+                    <?php echo "$data5[maxplayers]";?>
+                </div>
+                <div class="col-md-2"><strong>Uptime: </strong>
+                    <?php echo "$data5[uptime]";?>%</button>
+                </div>
+                <div class="col-md-1">
+                    <a href='steam://connect/164.132.202.16:27185'>
+                        <button type="button" class="btn btn-default btn-xs">Join Server</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+} else { 
+ // display nothing server not in use
+} ?>
     <style>
         #onlinestatus {
             float: left;
