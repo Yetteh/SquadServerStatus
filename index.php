@@ -5,9 +5,9 @@
 
 <?php 
 require 'api.php'; // Converts JSON to PHP 
-require 'config.php' // Grabbing this for the luls 
-?>
+require 'config.php' // Grabbing this for the luls ]
 
+?>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -16,13 +16,96 @@ require 'config.php' // Grabbing this for the luls
     </div>
     <div class="row clearfix">
         <div class="col-md-12 column">
-        <?php $online=$data[ 'is_online'] + $data2[ 'is_online'] + $data3[ 'is_online']; 
-            switch($online){ 
-              case 1: echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 server is online.'; break; 
-              case 2: echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">All servers are up and running.'; break; 
-              case 3: echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">All servers are up and running.'; break; 
-              default: echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.'; break; } ?>
-            <small class="pull-right">Refreshed on <?php echo $data['last_check']?></small>
+<?php 
+
+$online = $server1online + $server2online + $server3online + $server4online + $server5online;
+switch ($servers) {
+    case 1:
+        switch ($online) {
+            case 1:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 of 1 servers are online.';
+                break;
+            default:
+                echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
+                break;
+        }
+        break;
+    case 2:
+        switch ($online) {
+            case 1:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 of 2 servers are online.';
+                break;
+            case 2:
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 2 of 2 servers are online.';
+                break;
+            default:
+                echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
+                break;
+        }
+        break;
+    case 3:
+        switch ($online) {
+            case 1:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 of 3 servers are online.';
+                break;
+            case 2:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 2 of 3 servers are online.';
+                break;
+            case 3:
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 3 servers are online.';
+                break;
+            default:
+                echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
+                break;
+        }
+        break;
+    case 4:
+        switch ($online) {
+            case 1:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 of 4 servers are online.';
+                break;
+            case 2:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 2 of 4 servers are online.';
+                break;
+            case 3:
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 4 servers are online.';
+                break;
+            case 4:
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 4 of 4 servers are online.';
+                break;
+            default:
+                echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
+                break;
+        }
+        break;
+    case 5:
+        switch ($online) {
+            case 1:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 1 of 5 servers are online.';
+                break;
+            case 2:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 2 of 5 servers are online.';
+                break;
+            case 3:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 3 servers are online.';
+                break;
+            case 4:
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 4 of 5 servers are online.';
+                break;
+            case 5:
+                echo '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 5 of 5 servers are online.';
+                break;
+            default:
+                echo '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">All servers are down, contact an administrator.';
+                break;
+        }
+        break;
+}
+?>
+
+
+    
+           <small class="pull-right">Refreshed on <?php echo $data['last_check']?></small>
             </h3>
         </div>
     </div>
@@ -37,7 +120,7 @@ require 'config.php' // Grabbing this for the luls
                 <?php echo "$data[query_port]";?>
             </div>
             <div id="onlinestatus">
-                <?php if ($data[ 'is_online']>='1') {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
+                <?php if ($server1online==1) {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -76,7 +159,7 @@ require 'config.php' // Grabbing this for the luls
                 <?php echo "$data2[query_port]";?>
             </div>
             <div id="onlinestatus">
-                <?php if ($data2[ 'is_online']>='1') {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
+                <?php if ($server2online==1) {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -114,7 +197,7 @@ require 'config.php' // Grabbing this for the luls
                 <?php echo "$data3[query_port]";?>
             </div>
             <div id="onlinestatus">
-                <?php if ($data3[ 'is_online']>='1') {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
+                 <?php if ($server3online==1) {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -153,7 +236,7 @@ require 'config.php' // Grabbing this for the luls
                 <?php echo "$data4[query_port]";?>
             </div>
             <div id="onlinestatus">
-                <?php if ($data4[ 'is_online']>='1') {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
+                 <?php if ($server4online==1) {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -192,7 +275,7 @@ require 'config.php' // Grabbing this for the luls
                 <?php echo "$data5[query_port]";?>
             </div>
             <div id="onlinestatus">
-                <?php if ($data5[ 'is_online']>='1') {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
+                <?php if ($server5online==1) {echo '<span class="label label-success">Online</span>';}else {echo '<span class="label label-danger">Offline</span>';}?></div>
         </div>
         <div class="panel-body">
             <div class="row">
