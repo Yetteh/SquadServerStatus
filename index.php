@@ -128,26 +128,6 @@ require 'config.php' // Grabbing this for the luls
         </div>
     </div>
 
-
-    <div class="panel panel-default">
-        <div class="panel-heading">Zulu X-Ray Delta (COOP WORKSHOP)</div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-11">
-                    <a href="http://www.gametracker.com/server_info/164.132.202.16:27015/" target="_blank"><img src="http://cache.www.gametracker.com/server_info/164.132.202.16:27015/b_560_95_1.png" border="0" width="560" height="95" alt="" />
-                    </a>
-                </div>
-                <div class="col-md-1">
-                    <a href='steam://connect/164.132.202.16:27015'>
-                        <button type="button" class="btn btn-default btn-xs">Join Server</button>
-                    </a>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
     <style>
         #onlinestatus {
             float: left;
