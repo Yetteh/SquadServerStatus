@@ -27,6 +27,8 @@ require 'config.php' // Grabbing this for the luls
         </div>
     </div>
 
+<?php if (!empty($server1)) {
+?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <?php echo "$data[hostname]";?>
@@ -60,7 +62,12 @@ require 'config.php' // Grabbing this for the luls
             </div>
         </div>
     </div>
-
+<?php
+} else { 
+ // display nothing server not in use
+} ?>
+<?php if (!empty($server2)) {
+?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <?php echo "$data2[hostname]";?>
@@ -93,7 +100,12 @@ require 'config.php' // Grabbing this for the luls
             </div>
         </div>
     </div>
-
+    <?php
+} else { 
+ // display nothing server not in use
+} ?>
+<?php if (!empty($server3)) {
+?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <?php echo "$data3[hostname]";?>
@@ -127,7 +139,10 @@ require 'config.php' // Grabbing this for the luls
             </div>
         </div>
     </div>
-
+    <?php
+} else { 
+ // display nothing server not in use
+} ?>
     <style>
         #onlinestatus {
             float: left;
