@@ -87,7 +87,7 @@ switch ($servers) {
                 echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Some servers are down. Only 2 of 5 servers are online.';
                 break;
             case 3:
-                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 3 servers are online.';
+                echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 3 of 5 servers are online.';
                 break;
             case 4:
                 echo '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">Everything is online. Only 4 of 5 servers are online.';
@@ -102,9 +102,6 @@ switch ($servers) {
         break;
 }
 ?>
-
-
-    
            <small class="pull-right">Refreshed on <?php echo $data['last_check']?></small>
             </h3>
         </div>
