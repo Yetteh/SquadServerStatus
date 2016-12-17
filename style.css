@@ -1,0 +1,11 @@
+     #onlinestatus {
+            float: left;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+        #address {
+            float: right;
+        }
+        button.btn.btn-default.btn-xs {
+            margin-left: -20px;
+        }

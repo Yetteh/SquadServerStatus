@@ -1,4 +1,13 @@
 <?php
+
+
+$server1 = 'https://squad-servers.com/api/?object=servers&element=detail&key=$apiserver1';
+$server2 = 'https://squad-servers.com/api/?object=servers&element=detail&key=$apiserver2';
+$server3 = 'https://squad-servers.com/api/?object=servers&element=detail&key=$apiserver3';
+$server4 = 'https://squad-servers.com/api/?object=servers&element=detail&key=$apiserver4';
+$server5 = 'https://squad-servers.com/api/?object=servers&element=detail&key=$apiserver5';
+
+
 require 'config.php';
 $servers = 0;
 //Lets decode the JSON but only if its defined in the config!

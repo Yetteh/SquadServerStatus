@@ -1,5 +1,6 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
@@ -135,7 +136,7 @@ switch ($servers) {
                     <?php echo "$data[uptime]";?>%</button>
                 </div>
                 <div class="col-md-1">
-                    <a href='steam://connect/164.132.202.16:27165'>
+                     <a href='steam://connect/<?php echo "$data[address]"?>:<?php echo "$data[query_port]"?>'>
                         <button type="button" class="btn btn-default btn-xs">Join Server</button>
                     </a>
                 </div>
@@ -173,7 +174,7 @@ switch ($servers) {
                 <div class="col-md-2"><strong>Uptime: </strong>
                     <?php echo "$data2[uptime]";?>% </div>
                 <div class="col-md-1">
-                    <a href='steam://connect/164.132.202.16:27175'>
+                    <a href='steam://connect/<?php echo "$data2[address]"?>:<?php echo "$data2[query_port]"?>'>
                         <button type="button" class="btn btn-default btn-xs">Join Server</button>
                     </a>
                 </div>
@@ -212,7 +213,7 @@ switch ($servers) {
                     <?php echo "$data3[uptime]";?>%</button>
                 </div>
                 <div class="col-md-1">
-                    <a href='steam://connect/164.132.202.16:27185'>
+                    <a href='steam://connect/<?php echo "$data3[address]"?>:<?php echo "$data3[query_port]"?>'>
                         <button type="button" class="btn btn-default btn-xs">Join Server</button>
                     </a>
                 </div>
@@ -251,7 +252,7 @@ switch ($servers) {
                     <?php echo "$data4[uptime]";?>%</button>
                 </div>
                 <div class="col-md-1">
-                    <a href='steam://connect/164.132.202.16:27185'>
+                     <a href='steam://connect/<?php echo "$data4[address]"?>:<?php echo "$data4[query_port]"?>'>
                         <button type="button" class="btn btn-default btn-xs">Join Server</button>
                     </a>
                 </div>
@@ -290,7 +291,7 @@ switch ($servers) {
                     <?php echo "$data5[uptime]";?>%</button>
                 </div>
                 <div class="col-md-1">
-                    <a href='steam://connect/164.132.202.16:27185'>
+                     <a href='steam://connect/<?php echo "$data5[address]"?>:<?php echo "$data5[query_port]"?>'>
                         <button type="button" class="btn btn-default btn-xs">Join Server</button>
                     </a>
                 </div>
@@ -301,16 +302,3 @@ switch ($servers) {
 } else { 
  // display nothing server not in use
 } ?>
-    <style>
-        #onlinestatus {
-            float: left;
-            margin-top: 5px;
-            margin-right: 10px;
-        }
-        #address {
-            float: right;
-        }
-        button.btn.btn-default.btn-xs {
-            margin-left: -20px;
-        }
-    </style>
